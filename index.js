@@ -16,7 +16,9 @@ const xatlovRouter = require("./routes/xatlov")
 const multer = require("multer")
 const path = require("path")
 const app = express()
+const cors = require("cors")
 app.use(express.json())
+app.use(cors())
 
 mongoose.connect("mongodb+srv://kuldashev:mO5JzQd3x8annG8z@cluster0.r6vwn.mongodb.net/maktab?retryWrites=true&w=majority",  {
     
