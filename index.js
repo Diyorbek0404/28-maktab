@@ -26,21 +26,9 @@ mongoose.connect("mongodb+srv://kuldashev:mO5JzQd3x8annG8z@cluster0.r6vwn.mongod
     console.log("mongodb ulandi")
 })
 
-app.use("/images", express.static(path.join(__dirname, "/images")))
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, "images")
-    },
-    filename: (req, file, cb) => {
-        cb(null, req.body.name)
-    }
-})
 
-const upload = multer({ storage: storage });
-app.post("/api/upload", upload.single("file"), (req, res) => {
-    res.status(200).json("File has been uploaded");
-});
-postlastfoutRouter
+
+
 app.use("/api/post", postRouter)
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
