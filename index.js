@@ -20,7 +20,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://kuldashev:mO5JzQd3x8annG8z@cluster0.r6vwn.mongodb.net/maktab?retryWrites=true&w=majority",  {
+mongoose.connect("mongodb+srv://kuldashev:mO5JzQd3x8annG8z@cluster0.blges.mongodb.net/maktabsayti?retryWrites=true&w=majority",  {
     
 }).then(() => {
     console.log("mongodb ulandi")
